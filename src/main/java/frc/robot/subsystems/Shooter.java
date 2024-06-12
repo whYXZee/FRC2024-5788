@@ -35,6 +35,11 @@ public class Shooter extends SubsystemBase {
     shooterMotor2.set(power);
   }
 
+  public void setShooterSpinPower(double powerTop, double powerBottom) {
+    shooterMotor1.set(powerBottom);
+    shooterMotor2.set(powerTop);
+  }
+
   public void setShooterIntake(double speed) {
     shooterIndex.set(speed);
   }

@@ -102,7 +102,7 @@ public class TeleopDrive extends Command {
     m_driveBase.setDriveSpeed(RobotContainer.getSaturatedSpeeds(xVel, yVel, omega));
     // m_elevator.setElevatorPower(RobotContainer.getElevatorLeftJoystick());
 
-    m_intake.setIntakePower(RobotContainer.getIntakeRightTrigger() - RobotContainer.getIntakeLeftTrigger());
+    m_intake.setIntakePower((RobotContainer.getIntakeRightTrigger() - RobotContainer.getIntakeLeftTrigger()) * .6);
     
     m_shooter.setShooterPower(RobotContainer.getShooterRightTrigger());
 
@@ -123,8 +123,8 @@ public class TeleopDrive extends Command {
     }
 
     if (RobotContainer.getManipulatorYBool()) { //experimental amp
-      wristPos = 0.0398;
-      m_shooter.setShooterPower(-0.5);
+      wristPos = 0.035;
+      m_shooter.setShooterSpinPower(-0.45, -0.15);
     }
 
     if(RobotContainer.getManipulatorXBool()) { //photon shoot

@@ -123,8 +123,8 @@ public class TeleopDrive extends Command {
     }
 
     if (RobotContainer.getManipulatorYBool()) { //experimental amp
-      wristPos = 0.032;
-      m_shooter.setShooterSpinPower(-0.45, -0.1);
+      wristPos = 0.0300;
+      m_shooter.setShooterSpinPower(-0.40, -0.09);
     }
 
     if(RobotContainer.getManipulatorXBool()) { //photon shoot
